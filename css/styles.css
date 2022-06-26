@@ -12,6 +12,8 @@
 /* Цвет border карточек портфолио -#eeeeee; */
 /* Цвет border хедера - #ececec; */
 /* Цвет бекграунда героя - #c4c4c4; */
+/* Цвет иконок соцсетей - #afb1b8; */
+/* Цвет бекграунда иконок соцсетей футера - rgba(255, 255, 255, 0.1); */
 
 /* Обводка - outline: 2px solid tomato; */
 
@@ -29,6 +31,8 @@
   --border-header-color: #ececec;
   --border-portfolio-card: #eeeeee;
   --hero-bg-color: rgba(47, 48, 58, 0.4);
+  --social-networks-logo-color: #afb1b8;
+  --social-logo-footer-bg-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Base */
@@ -129,10 +133,7 @@
   margin-right: 10px;
 }
 
-.icon-envelope:hover {
-  fill: var(--accent-color);
-}
-
+.icon-envelope:hover,
 .icon-phone:hover {
   fill: var(--accent-color);
 }
@@ -141,6 +142,15 @@
 .footer {
   background-color: var(--hero-footer-bg-color);
   padding: 60px 0;
+}
+
+.footer .container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-address {
+  margin-right: 70px;
 }
 
 .footer .logo {
@@ -168,6 +178,19 @@
 .footer .contacts {
   color: var(--footer-text-color);
   text-decoration: none;
+}
+
+.footer-social .title {
+  color: var(--primary-white-color);
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.social-network-link.social-footer-link {
+  background-color: var(--social-logo-footer-bg-color);
+  fill: var(--primary-white-color);
 }
 
 /* Site-nav */
@@ -323,7 +346,7 @@
 }
 
 .employee-component {
-  padding: 30px 0 30px;
+  padding: 30px 0;
 }
 
 .team-list .title {
@@ -341,8 +364,68 @@
   display: block;
 }
 
-.team-list p {
-  margin: 0;
+.profession {
+  margin: 0 0 16px;
+}
+
+/* Social networks */
+
+.social-network-list {
+  text-align: center;
+}
+
+.social-network {
+  display: inline-flex;
+}
+
+.social-network:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-network-link {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  fill: var(--social-networks-logo-color);
+}
+
+.icon-network {
+  width: 20px;
+  height: 20px;
+}
+
+.social-network-link:hover,
+.social-network-link:focus {
+  fill: var(--primary-white-color);
+  background-color: var(--accent-color);
+}
+
+/* Our clients section */
+.list-clients {
+  display: flex;
+}
+
+.list-clients .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.icon-client {
+  display: inline-flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--social-networks-logo-color);
+  border-radius: 4px;
+  align-items: center;
+  fill: var(--social-networks-logo-color);
+}
+
+.icon-client:hover,
+.icon-client:focus {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 /* Portfolio page*/
