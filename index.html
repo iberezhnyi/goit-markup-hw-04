@@ -27,7 +27,9 @@
         <nav class="site-nav main-nav">
           <a href="./index.html" class="logo">Web<span class="logo-studio">Studio</span></a>
           <ul class="list main-nav">
-            <li class="item"><a href="./index.html" class="link current">Студия</a></li>
+            <li class="item current-position">
+              <a href="./index.html" class="link current">Студия</a>
+            </li>
             <li class="item"><a href="./portfolio.html" class="link">Портфолио</a></li>
             <li class="item"><a href="#" class="link">Контакты</a></li>
           </ul>
@@ -59,7 +61,7 @@
       <section class="section hero overlay">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="button">Заказать услугу</button>
+          <button data-modal-open type="button" class="button">Заказать услугу</button>
         </div>
       </section>
 
@@ -119,29 +121,32 @@
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="list workflow">
-            <li class="item">
+            <li class="item workflow-position">
               <img
                 src="./images/programmer-workflow.jpg"
                 alt="Рабочий процесс программиста за клавиатурой с планшетом"
                 width="370"
                 height="294"
               />
+              <h3 class="working-process-thumb">Десктопные приложения</h3>
             </li>
-            <li class="item">
+            <li class="item workflow-position">
               <img
                 src="./images/creating-a-website.jpg"
                 alt="Создание макета сайта на ноутбуке с телефоном в руке"
                 width="370"
                 height="294"
               />
+              <h3 class="working-process-thumb">Мобильные приложения</h3>
             </li>
-            <li class="item">
+            <li class="item workflow-position">
               <img
                 src="./images/color-palette-workflow.jpg"
                 alt="Рабочий процесс выбора палитры цветов на планшете"
                 width="370"
                 height="294"
               />
+              <h3 class="working-process-thumb">Дизайнерские решения</h3>
             </li>
           </ul>
         </div>
@@ -410,5 +415,20 @@
         </div>
       </div>
     </footer>
+
+    <!-- Backdrop, modal -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="test">
+        <div class="modal">
+          <button data-modal-close class="modal-close-button">
+            <svg width="11" height="11">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
